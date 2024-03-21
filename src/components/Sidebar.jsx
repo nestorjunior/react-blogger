@@ -1,4 +1,6 @@
 import styles from './Sidebar.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPencil } from '@fortawesome/free-solid-svg-icons';
 
 export function Sidebar() {
   return(
@@ -11,11 +13,19 @@ export function Sidebar() {
         />
         
         <div className={styles.profile}>
+          <img
+            className={styles.avatar} 
+            src="https://github.com/nestorjunior.png" 
+            alt="" 
+          />
           <strong>Nestorino Silva</strong>
           <span>Pilgrim in this world!</span>
         </div>
         <footer>
-          <a href="#">Edit profile</a>
+          <a href="#">
+            <FontAwesomeIcon icon={faPencil} className={styles.iconPencil} />
+            Edit profile
+          </a>
         </footer>
       </aside>
     </>

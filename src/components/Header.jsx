@@ -6,7 +6,7 @@ export function Header() {
   return (
     <>
       <header className={styles.header}>
-        <FontAwesomeIcon icon={faComments} className='icon-logo' color="#00875f" size="2x" />
+        <FontAwesomeIcon icon={faComments} className={styles.iconLogo} />
       </header>
     </>
   )
