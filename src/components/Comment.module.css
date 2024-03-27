@@ -5,69 +5,69 @@
 }
 
 .comment > img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 8px;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 8px;
 }
 
 .commentBox {
-    flex: 1;
+	flex: 1;
 }
 .commentContent {
-    background: var(--gray-700);
-    border-radius: 8px;
-    padding: 1rem;
+	background: var(--gray-700);
+	border-radius: 8px;
+	padding: 1rem;
 }
 
 .commentContent header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .commentContent header button {
-    background: transparent;
-    border: 0;
-    color: var(--gray-400);
-    cursor: pointer;
-    line-height: 0;
-    border-radius: 2px;
-    padding: 2px;
+	background: transparent;
+	border: 0;
+	color: var(--gray-400);
+	cursor: pointer;
+	line-height: 0;
+	border-radius: 2px;
+	padding: 2px;
 }
 
 .commentAuthor {
-    display: block;
-    font-size: 0.875rem;
-    line-height: 1.6;
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.6;
 }
 
 .commentContent p {
-    margin-top: 1rem;
-    color: var(--gray-300);
+	margin-top: 1rem;
+	color: var(--gray-300);
 }
 
 .commentBox footer {
-    margin-top: 1rem;
+	margin-top: 1rem;
 }
 
 .commentBox footer button{
-    background: transparent;
-    border: 0;
-    color: var(--gray-400);
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+	background: transparent;
+	border: 0;
+	color: var(--gray-400);
+	display: flex;
+	align-items: center;
+	cursor: pointer;
 }
 
 .commentBox footer button span::before{
-    content: '\2022';
-    padding: 0 0.25rem;
+	content: '\2022';
+	padding: 0 0.25rem;
 }
 
 .commentBox footer button:hover{
-    color: var(--green-300);
+	color: var(--green-300);
 }
 .commentBox footer button svg{
-    margin-right: 0.5rem;
+	margin-right: 0.5rem;
 }
 
