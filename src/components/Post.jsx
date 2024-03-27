@@ -18,6 +18,13 @@ export function Post() {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis ex labore corporis delectus, velit odit? Libero placeat, sed itaque consequuntur consectetur veniam impedit inventore voluptate ullam cum ducimus expedita?</p>
           <a href="#"> #LoremIpsum</a> <a href="#">#Similique</a> <a href="#">#inventore</a> 
         </div>
+        <form className={styles.commentForm}>
+          <strong>Deixe seu feedback</strong>
+          <textarea placeholder='Deixe seu comentário'></textarea>
+          <footer>
+            <button type='submit'>Publicar</button>
+          </footer>
+        </form>
       </article>
     </>
   )
