@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './Sidebar.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil } from '@fortawesome/free-solid-svg-icons';

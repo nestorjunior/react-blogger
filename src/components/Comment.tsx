@@ -1,11 +1,24 @@
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp, faTrash } from '@fortawesome/free-solid-svg-icons'
 import styles from './Comment.module.css'
+import { useState } from 'react'
 
-export function Comment({content, onDeleteComment}) {
+interface CommentProps {
+	content: string;
+	onDeleteComment: (comment: string) => void;
+}
+
+export function Comment({content, onDeleteComment} : CommentProps) {
+
+		const [likeCount, setLikeCount] = useState(0)
 
 		function handleDeleteComment() {
 			onDeleteComment(content)
+		}
+
+		function handleCommentLike() {
+			setLikeCount(likeCount + 1)
 		}
 
 		return (
@@ -26,9 +39,9 @@ export function Comment({content, onDeleteComment}) {
 							<p>{content}</p>
 						</div>
 						<footer>
-							<button>
+							<button onClick={handleCommentLike}>
 								<FontAwesomeIcon icon={faThumbsUp} className={styles.commentThumbs} />
-								Aplaudir <span>20</span>
+								Aplaudir <span>{likeCount}</span>
 							</button>
 						</footer>
 					</div>

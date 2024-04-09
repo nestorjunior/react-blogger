@@ -17,13 +17,16 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.64",
-    "@types/react-dom": "^18.2.21",
+    "@types/node-sass": "^4.11.7",
+    "@types/react": "^18.2.75",
+    "@types/react-dom": "^18.2.24",
+    "@types/webpack-env": "^1.18.4",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.4.4",
     "vite": "^5.1.6"
   }
 }

@@ -1,9 +1,26 @@
+import React from 'react';
 import { Avatar } from './Avatar'
 import { Comment } from './Comment'
 import styles from './Post.module.css'
-import { useState } from 'react';
+import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react';
 
-export function Post(author, content) {
+interface Author {
+	name: string;
+	role: string;
+	avatarUrl: string;
+}
+
+interface Content {
+	type: 'paragraph' | 'link';
+	content: string;
+}
+
+interface PostProps {
+	author: Author;
+	content: Content[];
+}
+
+export function Post({author, content}:PostProps) {
 
 	const [comments, setComments] = useState([
 		'Hmm postagem bem interessante!'
@@ -11,22 +28,22 @@ export function Post(author, content) {
 
 	const[newCommentText, setNewCommentText] = useState('')
 
-	function handleCreateNewComment(e) {
+	function handleCreateNewComment(e:FormEvent) {
 		e.preventDefault()
 		setComments([...comments, newCommentText])
 		setNewCommentText('')
 	}
 
-	function handleNewComment(e) {
+	function handleNewComment(e: ChangeEvent<HTMLTextAreaElement>) {
 		e.target.setCustomValidity('')
 		setNewCommentText(e.target.value)
 	}
 
-	function handleNewCommentInvalid (e) {
+	function handleNewCommentInvalid (e: InvalidEvent<HTMLTextAreaElement>) {
 		e.target.setCustomValidity('Esse campo é obrigatório')
 	}
 
-	function deleteComment(commentToDelete) {
+	function deleteComment(commentToDelete: string) {
 		const commentsWithoutDeleOne = comments.filter(comment => {
 			return comment !== commentToDelete;
 		})
