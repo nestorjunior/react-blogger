@@ -2,8 +2,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp, faTrash } from '@fortawesome/free-solid-svg-icons'
 import styles from './Comment.module.css'
 
+export function Comment({content, onDeleteComment}) {
 
-export function Comment(props) {
+		function handleDeleteComment() {
+			onDeleteComment(content)
+		}
+
 		return (
 			<>
 				<div className={styles.comment}>
@@ -15,11 +19,11 @@ export function Comment(props) {
 								<div className={styles.commentAuthor}>
 									<strong>Nestorino Junior</strong>
 								</div>
-								<button title='Deletar comentário'>
+								<button title='Deletar comentário' onClick={handleDeleteComment}>
 									<FontAwesomeIcon icon={faTrash} className={styles.commentTrash} />
 								</button>
 							</header>
-							<p>{props.content}</p>
+							<p>{content}</p>
 						</div>
 						<footer>
 							<button>
